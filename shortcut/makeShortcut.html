@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>superMcalc</title>
+
+  <!-- ① Android Chrome用のWeb App Manifest設定 -->
+  <link rel="manifest" href="https://csdatalab.github.io/superMcalc/shortcut/manifest.json">
+
+  <!-- ② iOS (Safari) 用設定 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="superMcalc">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://csdatalab.github.io/superMcalc/shortcut/KeikyuTimeTablesuperMcalcIcon.png">
+  <link rel="icon" type="image/png" href="https://csdatalab.github.io/superMcalc/shortcut/KeikyuTimeTablesuperMcalcIcon.png">
+
+  <!-- ③ ショートカット起動時（?app=1 または standalone）のみ即時転送 -->
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const isFromHomeScreen = urlParams.get('app') === '1' || 
+                             window.navigator.standalone || 
+                             window.matchMedia('(display-mode: standalone)').matches;
+
+    if (isFromHomeScreen) {
+      window.location.replace("https://sites.google.com/csdatalab.com/root/superMcalc");
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .icon-preview {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      margin-bottom: 15px;
+    }
+    .guide-box {
+      background-color: #f5f5f7;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 20px 0;
+    }
+    .btn-jump {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #0b57d0;
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="https://csdatalab.github.io/superMcalc/shortcut/superMcalcIcon.png" class="icon-preview" alt="アイコン">
+
+  <h3>ブラウザのショートカット作成操作で<br>
+    このアイコンを追加できます</h3>
+
+  <div class="guide-box">
+    ブラウザの種類によって操作方法が異なります<br>
+    例えば、Chromeの場合には、画面右上端の縦型三点リーダから「インストールしてショートカット・・」を選択してください。
+  </div>
+
+  <p style="margin-top: 30px;">
+    <a class="btn-jump" href="https://sites.google.com/csdatalab.com/root/superMcalc">
+      スーパー電卓にもどる ＞
+    </a>
+  </p>
+
+</body>
+</html>

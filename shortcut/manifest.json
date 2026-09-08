@@ -1,0 +1,20 @@
+{
+  "name": "superMcalc",
+  "short_name": "superMcalc",
+  "start_url": "https://csdatalab.github.io/superMcalc/shortcut/makeShortcut.html?app=1",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "https://csdatalab.github.io/superMcalc/shortcut/superMcalcIcon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://csdatalab.github.io/superMcalc/shortcut/superMcalcIcon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
